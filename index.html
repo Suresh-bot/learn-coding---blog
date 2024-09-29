@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recepiex_</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -31,10 +34,14 @@
       z-index: 1000;
     }
 
+    /* Neon effect for logo */
     .logo {
       font-size: 30px;
       letter-spacing: 2px;
       font-weight: 700;
+      font-family: 'Red Hat Display', sans-serif; /* Red Hat Bold font */
+      color: #39FF14; /* Neon green color */
+      text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14, 0 0 80px #39FF14;
     }
 
     nav a {
@@ -64,11 +71,30 @@
       justify-content: center;
       color: white;
       text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Background overlay to make text more visible */
+      z-index: 1;
+    }
+
+    .hero h1, .hero p {
+      z-index: 2;
+      position: relative;
     }
 
     .hero h1 {
       font-size: 50px;
       margin-bottom: 20px;
+      color: lightgray; /* Light gray color for better contrast */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for visibility */
     }
 
     .hero p {
@@ -81,6 +107,7 @@
       margin-top: 20px;
       font-size: 20px;
       animation: bounce 1s infinite;
+      z-index: 2; /* Ensures the scroll-down arrow appears on top */
     }
 
     @keyframes bounce {
@@ -145,7 +172,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">RECEPIEX</div>
+    <div class="logo">Recepiex_</div> <!-- Neon logo in Red Hat Bold font -->
     <nav>
       <a href="#coding">Learn Coding</a>
       <a href="#motivation">Get Motivated</a>
@@ -216,13 +243,4 @@
       <div class="content-box">
         <img src="https://source.unsplash.com/300x200/?computer,work" alt="Programming Tutorials">
         <h3>MDN Web Docs</h3>
-        <p>Your go-to documentation for HTML, CSS, and JavaScript. <a href="https://developer.mozilla.org/en-US/" target="_blank">Visit MDN Web Docs</a></p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Recepiex_. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+        <p>Your go-to documentation for HTML, CSS, and JavaScript. <a href
