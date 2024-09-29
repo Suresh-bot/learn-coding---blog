@@ -5,57 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recepiex_</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #000; /* Black background */
-      color: #fff; /* White text */
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f5f7; /* Light gray background */
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #1c1c1c; /* Dark grey */
-      color: #ff0000; /* Red text */
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
       display: flex;
       align-items: center;
-      padding: 20px;
+      justify-content: space-between;
+      z-index: 1000;
     }
 
     .logo {
-      font-family: 'Arial Black', sans-serif; /* Bold and strong font */
-      font-size: 36px;
-      font-weight: 900;
-      color: white; /* White text */
-      letter-spacing: 4px; /* Add space between letters for a more iconic look */
-    }
-
-    nav {
-      margin-left: 20px;
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: 700;
     }
 
     nav a {
-      color: #ff0000; /* Red links */
+      color: #fff;
       text-decoration: none;
-      margin-right: 20px;
-      font-size: 18px;
+      margin: 0 20px;
+      font-size: 16px;
+      transition: color 0.3s;
     }
 
-    main {
+    nav a:hover {
+      color: #aaa;
+    }
+
+    section {
+      padding: 80px 20px; /* Add padding to prevent content from hiding under the fixed header */
+    }
+
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?coding,technology');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .scroll-down {
+      margin-top: 20px;
+      font-size: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin: 40px 0;
+      color: #000;
+    }
+
+    .section-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .content-box {
+      background-color: white;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
     }
 
-    main h1 {
-      color: #ff0000; /* Red headings */
+    .content-box img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .content-box h3 {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    .content-box p {
+      font-size: 16px;
+      color: #666;
     }
 
     footer {
-      background-color: #1c1c1c; /* Dark grey */
-      color: #ff0000; /* Red text */
-      padding: 10px;
+      background-color: #000;
+      color: #fff;
       text-align: center;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      padding: 20px;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -63,25 +147,82 @@
   <header>
     <div class="logo">RECEPIEX</div>
     <nav>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Learn JavaScript</a>
-      <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Python_basics" target="_blank">Learn Python</a>
+      <a href="#coding">Learn Coding</a>
+      <a href="#motivation">Get Motivated</a>
+      <a href="#resources">Resources</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Career Goals</h1>
-    <p>My next career goals:</p>
-    <ul>
-      <li>Explore becoming a Java full stack developer.</li>
-      <li>Consider transitioning to product or project management.</li>
-      <li>Continue to learn advanced coding skills and stay updated with AI trends.</li>
-      <li>Possibly switch to an R&D role within the next six months.</li>
-      <li>Maintain individual focus on tasks while adhering to deadlines.</li>
-    </ul>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Unlock Your Coding Potential</h1>
+    <p>Start learning new skills today and build the future you've always dreamed of.</p>
+    <div class="scroll-down">&#x2193; Scroll Down &#x2193;</div>
+  </section>
+
+  <!-- Coding Section -->
+  <section id="coding">
+    <h2 class="section-title">Coding Learning Path</h2>
+    <div class="section-content">
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?javascript" alt="JavaScript">
+        <h3>Master JavaScript</h3>
+        <p>JavaScript is the backbone of modern web development. Learn it to build interactive websites.</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?python" alt="Python">
+        <h3>Learn Python</h3>
+        <p>Python is one of the easiest and most powerful languages. Get started with AI, web development, and more.</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?html,css" alt="HTML CSS">
+        <h3>HTML & CSS</h3>
+        <p>Build the structure and design of your website with HTML and CSS. It's your first step to web development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motivation Section -->
+  <section id="motivation">
+    <h2 class="section-title">Stay Motivated</h2>
+    <div class="section-content">
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?motivation" alt="Motivational Quote">
+        <h3>"The future belongs to those who believe in the beauty of their dreams."</h3>
+        <p>- Eleanor Roosevelt</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?success" alt="Success">
+        <h3>"Success is not the key to happiness. Happiness is the key to success."</h3>
+        <p>- Albert Schweitzer</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?determination" alt="Determination">
+        <h3>"It does not matter how slowly you go as long as you do not stop."</h3>
+        <p>- Confucius</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <h2 class="section-title">Coding Resources</h2>
+    <div class="section-content">
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?laptop,study" alt="Coding Resources">
+        <h3>FreeCodeCamp</h3>
+        <p>Learn to code for free with interactive challenges and coding exercises. <a href="https://www.freecodecamp.org/" target="_blank">Visit FreeCodeCamp</a></p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?computer,work" alt="Programming Tutorials">
+        <h3>MDN Web Docs</h3>
+        <p>Your go-to documentation for HTML, CSS, and JavaScript. <a href="https://developer.mozilla.org/en-US/" target="_blank">Visit MDN Web Docs</a></p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2024 Recepiex_</p>
+    <p>&copy; 2024 Recepiex_. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
