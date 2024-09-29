@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recepiex_</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f5f7; /* Light gray background */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    /* Neon effect for logo */
+    .logo {
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      font-family: 'Red Hat Display', sans-serif; /* Red Hat Bold font */
+      color: #39FF14; /* Neon green color */
+      text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14, 0 0 80px #39FF14;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #aaa;
+    }
+
+    section {
+      padding: 80px 20px; /* Add padding to prevent content from hiding under the fixed header */
+    }
+
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?coding,technology');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Background overlay to make text more visible */
+      z-index: 1;
+    }
+
+    .hero h1, .hero p {
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: lightgray; /* Light gray color for better contrast */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for visibility */
+    }
+
+    .hero p {
+      font-size: 24px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .scroll-down {
+      margin-top: 20px;
+      font-size: 20px;
+      animation: bounce 1s infinite;
+      z-index: 2; /* Ensures the scroll-down arrow appears on top */
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin: 40px 0;
+      color: #000;
+    }
+
+    .section-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .content-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .content-box img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .content-box h3 {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    .content-box p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Recepiex_</div> <!-- Neon logo in Red Hat Bold font -->
+    <nav>
+      <a href="#coding">Learn Coding</a>
+      <a href="#motivation">Get Motivated</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Unlock Your Coding Potential</h1>
+    <p>Start learning new skills today and build the future you've always dreamed of.</p>
+    <div class="scroll-down">&#x2193; Scroll Down &#x2193;</div>
+  </section>
+
+  <!-- Coding Section -->
+  <section id="coding">
+    <h2 class="section-title">Coding Learning Path</h2>
+    <div class="section-content">
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?javascript" alt="JavaScript">
+        <h3>Master JavaScript</h3>
+        <p>JavaScript is the backbone of modern web development. Learn it to build interactive websites.</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?python" alt="Python">
+        <h3>Learn Python</h3>
+        <p>Python is one of the easiest and most powerful languages. Get started with AI, web development, and more.</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?html,css" alt="HTML CSS">
+        <h3>HTML & CSS</h3>
+        <p>Build the structure and design of your website with HTML and CSS. It's your first step to web development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motivation Section -->
+  <section id="motivation">
+    <h2 class="section-title">Stay Motivated</h2>
+    <div class="section-content">
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?motivation" alt="Motivational Quote">
+        <h3>"The future belongs to those who believe in the beauty of their dreams."</h3>
+        <p>- Eleanor Roosevelt</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?success" alt="Success">
+        <h3>"Success is not the key to happiness. Happiness is the key to success."</h3>
+        <p>- Albert Schweitzer</p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?determination" alt="Determination">
+        <h3>"It does not matter how slowly you go as long as you do not stop."</h3>
+        <p>- Confucius</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <h2 class="section-title">Coding Resources</h2>
+    <div class="section-content">
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?laptop,study" alt="Coding Resources">
+        <h3>FreeCodeCamp</h3>
+        <p>Learn to code for free with interactive challenges and coding exercises. <a href="https://www.freecodecamp.org/" target="_blank">Visit FreeCodeCamp</a></p>
+      </div>
+      <div class="content-box">
+        <img src="https://source.unsplash.com/300x200/?computer,work" alt="Programming Tutorials">
+        <h3>MDN Web Docs</h3>
+        <p>Your go-to documentation for HTML, CSS, and JavaScript. <a href
